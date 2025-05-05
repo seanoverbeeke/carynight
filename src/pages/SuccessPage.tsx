@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import caryImage from '../assets/cary.png';
+import caryImage from '../assets/cary2.png';
 
 const Container = styled.div`
   display: flex;
