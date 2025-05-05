@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import caryImage from '../assets/cary2.png';
 
 const Container = styled.div`
   display: flex;
@@ -44,9 +45,6 @@ const Message = styled.p`
   font-weight: bold;
 `;
 
-// Reliable image URL that definitely works
-const BACKUP_IMAGE_URL = "https://i.ibb.co/tZy73yQ/cary2.png";
-
 const SuccessPage = () => {
   return (
     <Container>
@@ -54,7 +52,7 @@ const SuccessPage = () => {
       <Subtitle>Your one night with Cary is confirmed</Subtitle>
       
       <ImageContainer>
-        <CaryImage src={BACKUP_IMAGE_URL} alt="Cary" />
+        <CaryImage src={caryImage} alt="Cary" />
       </ImageContainer>
       
       <Message>Have at him!</Message>
