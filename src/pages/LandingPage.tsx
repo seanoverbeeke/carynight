@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
+import caryImage from '../assets/cary2.png';
 
 const Container = styled.div`
   display: flex;
@@ -69,7 +70,7 @@ const LandingPage = () => {
   return (
     <Container>
       <ImageContainer>
-        <CaryImage src="/cary2.png" alt="Cary" />
+        <CaryImage src={caryImage} alt="Cary" />
       </ImageContainer>
       <Title>Enjoy One Night with Cary</Title>
       <Price>$7.99</Price>

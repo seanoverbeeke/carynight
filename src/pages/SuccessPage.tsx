@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import caryImage from '../assets/cary2.png';
 
 const Container = styled.div`
   display: flex;
@@ -51,7 +52,7 @@ const SuccessPage = () => {
       <Subtitle>Your one night with Cary is confirmed</Subtitle>
       
       <ImageContainer>
-        <CaryImage src="/cary2.png" alt="Cary" />
+        <CaryImage src={caryImage} alt="Cary" />
       </ImageContainer>
       
       <Message>Have at him!</Message>
