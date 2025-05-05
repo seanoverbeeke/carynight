@@ -10,46 +10,48 @@ const Container = styled.div`
   height: 100vh;
   max-width: 414px; /* iPhone aspect ratio */
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 10px;
   background-color: var(--netflix-black);
   text-align: center;
+  overflow-y: auto;
 `;
 
 const ImageContainer = styled.div`
-  width: 100%;
-  margin-bottom: 20px;
+  width: 80%;
+  margin-bottom: 5px;
 `;
 
 const CaryImage = styled.img`
   width: 100%;
   height: auto;
   display: block;
+  border-radius: 8px;
 `;
 
 const Title = styled.h1`
-  font-size: 36px;
+  font-size: 28px;
   font-weight: bold;
-  margin: 20px 0;
+  margin: 5px 0;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   color: #e8b708; /* Gold color */
 `;
 
 const Price = styled.div`
-  font-size: 48px;
+  font-size: 36px;
   font-weight: bold;
-  margin: 20px 0;
+  margin: 5px 0;
 `;
 
 const Button = styled.button`
   background-color: var(--netflix-red);
   color: white;
   border: none;
-  padding: 16px 40px;
+  padding: 12px 30px;
   font-size: 20px;
   font-weight: bold;
   border-radius: 4px;
   cursor: pointer;
-  margin: 30px 0;
+  margin: 10px 0 20px;
   transition: transform 0.2s, background-color 0.2s;
 
   &:hover {
