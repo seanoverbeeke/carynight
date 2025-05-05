@@ -20,32 +20,32 @@ async function generateSocialImage() {
   
   try {
     // Load the Cary image
-    const caryImagePath = path.resolve(__dirname, '../src/assets/cary.png');
+    const caryImagePath = path.resolve(__dirname, '../src/assets/cary2.png');
     const image = await loadImage(caryImagePath);
     
     // Calculate image dimensions to maintain aspect ratio
     const imageAspectRatio = image.width / image.height;
-    let imageWidth = 500; // Adjust as needed
+    let imageWidth = 700; // Adjust as needed
     let imageHeight = imageWidth / imageAspectRatio;
     
     // Draw the image
     context.drawImage(
       image,
       (width - imageWidth) / 2,
-      100,
+      30,
       imageWidth,
       imageHeight
     );
     
     // Add text
-    context.fillStyle = '#E50914'; // Netflix red
+    context.fillStyle = '#e8b708'; // Gold color
     context.font = 'bold 60px "Helvetica Neue", Helvetica, Arial, sans-serif';
     context.textAlign = 'center';
-    context.fillText('One Night with Cary', width / 2, 80);
+    context.fillText('ONE NIGHT WITH CARY', width / 2, height - 180);
     
     context.fillStyle = 'white';
-    context.font = 'bold 80px "Helvetica Neue", Helvetica, Arial, sans-serif';
-    context.fillText('$7.99', width / 2, height - 100);
+    context.font = 'bold 60px "Helvetica Neue", Helvetica, Arial, sans-serif';
+    context.fillText('ONLY $7.99', width / 2, height - 100);
     
     // Save the image
     const buffer = canvas.toBuffer('image/png');

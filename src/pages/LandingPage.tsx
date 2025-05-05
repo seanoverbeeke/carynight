@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
+import caryImage from '../assets/cary2.png';
 
 const Container = styled.div`
   display: flex;
@@ -10,24 +11,33 @@ const Container = styled.div`
   max-width: 414px; /* iPhone aspect ratio */
   margin: 0 auto;
   padding: 40px 20px;
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
-              url('https://images.unsplash.com/photo-1574267432553-4b4628081c31?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80');
-  background-size: cover;
-  background-position: center;
+  background-color: var(--netflix-black);
   text-align: center;
+`;
+
+const ImageContainer = styled.div`
+  width: 100%;
+  margin-bottom: 20px;
+`;
+
+const CaryImage = styled.img`
+  width: 100%;
+  height: auto;
+  display: block;
 `;
 
 const Title = styled.h1`
   font-size: 36px;
   font-weight: bold;
-  margin-top: 60px;
+  margin: 20px 0;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  color: #e8b708; /* Gold color */
 `;
 
 const Price = styled.div`
   font-size: 48px;
   font-weight: bold;
-  margin: 40px 0;
+  margin: 20px 0;
 `;
 
 const Button = styled.button`
@@ -39,7 +49,7 @@ const Button = styled.button`
   font-weight: bold;
   border-radius: 4px;
   cursor: pointer;
-  margin-bottom: 60px;
+  margin: 30px 0;
   transition: transform 0.2s, background-color 0.2s;
 
   &:hover {
@@ -51,15 +61,18 @@ const Button = styled.button`
 const LandingPage = () => {
   const navigate = useNavigate();
 
-  const handleYesClick = () => {
+  const handleOrderClick = () => {
     navigate('/payment');
   };
 
   return (
     <Container>
+      <ImageContainer>
+        <CaryImage src={caryImage} alt="Cary" />
+      </ImageContainer>
       <Title>Enjoy One Night with Cary</Title>
       <Price>$7.99</Price>
-      <Button onClick={handleYesClick}>Yes</Button>
+      <Button onClick={handleOrderClick}>ORDER NOW</Button>
     </Container>
   );
 };
