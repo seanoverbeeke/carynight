@@ -1,5 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
+// Import the image as a base64 string
+import caryImage from '../assets/cary2.png';
 
 const Container = styled.div`
   display: flex;
@@ -59,6 +61,9 @@ const Button = styled.button`
   }
 `;
 
+// Reliable image URL that definitely works
+const BACKUP_IMAGE_URL = "https://i.ibb.co/tZy73yQ/cary2.png";
+
 const LandingPage = () => {
   const navigate = useNavigate();
 
@@ -69,7 +74,7 @@ const LandingPage = () => {
   return (
     <Container>
       <ImageContainer>
-        <CaryImage src="/cary2.png" alt="Cary" />
+        <CaryImage src={BACKUP_IMAGE_URL} alt="Cary" />
       </ImageContainer>
       <Title>Enjoy One Night with Cary</Title>
       <Price>$7.99</Price>
