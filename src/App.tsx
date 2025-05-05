@@ -32,7 +32,7 @@ function App() {
       <GlobalStyle />
       <Router>
         <Routes>
-          <Route path="/" element={<LandingPage />} />
+          <Route path="/*" element={<LandingPage />} />
           <Route path="/payment" element={<PaymentPage />} />
           <Route path="/success" element={<SuccessPage />} />
         </Routes>
