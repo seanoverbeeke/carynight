@@ -31,4 +31,8 @@ test:
         - echo "No tests configured"
     test:
       commands:
-        - echo "No tests to run" 
+        - echo "No tests to run"
+  artifacts:
+    baseDirectory: dist
+    files:
+      - '**/*' 
